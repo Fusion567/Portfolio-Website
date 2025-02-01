@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="c.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <script defer src="work.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">Yashraj <span>.</span></h1>
+        </nav>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="work.html">Work</a></li>
+            <a href="hire.html">
+                <button class="cta">
+                    <span>Hire Me</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </a>
+        </ul>
+    </header>
+
+    <main>
+        <section class="work-section">
+            <div class="project">
+                <div class="details">
+                    <h1 class="project-number">01</h1>
+                    <h2 id="projectTitle">Chatbot</h2>
+                    <p id="projectDesc">A chatbot for Financial Queries</p>
+                    <p><span id="projectTech">NLTK, Flask, HTML 5, CSS 3, JavaScript</span></p>
+                    <div class="actions">
+                        <a href="#" class="icon github-icon" id="githubLink" target="_blank">
+                            <img src="icons/github.png" alt="Github">
+                        </a>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <a href="#" id="projectImageLink" target="_blank">
+                        <img id="projectImage" src="icons/Chatbot_1.png" alt="Project Screenshot">
+                    </a>
+                    <div class="navigation-buttons">
+                        <ul class="wrapper">
+                            <li class="icon black" id="prevProject">
+                                <span class="tooltip">Left</span>
+                                <span>
+                                    <svg viewBox="0 0 16 16" class="bi bi-chevron-double-left" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                                        <path d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="icon black" id="nextProject">
+                                <span class="tooltip">Right</span>
+                                <span>
+                                    <svg viewBox="0 0 16 16" class="bi bi-chevron-double-right" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                                        <path d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                                    </svg>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </main>
+</body>
+</html>
