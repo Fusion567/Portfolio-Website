@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #0a0a0a;
+        color: #fff;
+        line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+        background-color: #0a0a0a;
+        padding: 1rem 2rem;
+        display: flex; /* Flexbox container */
+        justify-content: space-between; /* Separate logo and nav-links */
+        align-items: center; /* Align vertically */
+        position: sticky;
+        top: 0;
+        width: 100%; /* Ensure full width */
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+        margin: 0;
+    }
+
+    .logo span {
+        color: #00ff88;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
+
+    nav {
+        display: flex; /* Makes the child elements align in a row */
+        align-items: center; /* Aligns items vertically in the center */
+        justify-content: space-between; /* Adds space between items if needed */
+        gap: 1rem; /* Adds space between the <ul> and the <button> */
+    }
+
+    .nav-links {
+        display: flex; /* Ensures the list items are in a row */
+        gap: 1rem; /* Adds spacing between list items */
+        list-style: none; /* Removes default bullet points */
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        margin: 0.5rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #00ff88;
+    }
+    
+    .cta {
+        position: relative;
+        margin: auto;
+        padding: 12px 18px;
+        transition: all 0.2s ease;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    
+    .cta:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 50px;
+        background: #83ec8d;
+        width: 45px;
+        height: 45px;
+        transition: all 0.3s ease;
+    }
+    
+    .cta span {
+        position: relative;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #236724;
+    }
+    
+    .cta svg {
+        position: relative;
+        top: 0;
+        margin-left: 10px;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: #256723;
+        stroke-width: 2;
+        transform: translateX(-5px);
+        transition: all 0.3s ease;
+    }
+    
+    .cta:hover:before {
+        width: 100%;
+        background: #83ec8d;;
+    }
+    
+    .cta:hover svg {
+        transform: translateX(0);
+    }
+    
+    .cta:active {
+        transform: scale(0.95);
+    }
+    .icon {
+        width: 40px; /* Set the desired size */
+        height: 40px;
+        margin-right: 10px;
+        vertical-align: middle; /* Align with text */
+    }
+    main {
+    margin-top: 12%;
+    text-align: center; /* Center text inside the container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for visual appeal */
+    }
+    .contact-container {
+    display: grid;
+    grid-template-columns: 40px auto; /* First column for icons, second for text */
+    gap: 10px 20px; /* Row and column gaps */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: start; /* Align items to the start of the rows */
+    margin: 20px auto; /* Center the container with some space */
+    width: fit-content; /* Keep it compact */
+}
+
+.contact-info {
+    display: contents; /* Allows grid layout to control positioning */
+}
+
+.contact-info .icon {
+    width: 60px; /* Fixed size for all icons */
+    height: 60px;
+    object-fit: contain; /* Keeps icons proportional */
+}
+
+.contact-info .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical alignment for multi-line text */
+    text-align: left;
+}
+
+.contact-info p, .contact-info a {
+    margin: 0;
+    font-size: 20px; /* Consistent font size */
+    color: #ababab;
+    line-height: 1.4; /* Better readability */
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #0077cc;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">Yashraj <span>.</span></h1>
+        </nav>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="work.html">Work</a></li>
+            <a href="hire.html">
+                <button class="cta">
+                    <span>Hire Me</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </a>
+        </ul>
+    </header>
+    <main>
+        <div class="contact-container">
+            <div class="contact-info">
+                <img src="icons/phone.png" alt="Phone Icon" class="icon">
+                <div class="text">
+                    <p>Phone</p>
+                    <p>+91 9104797518</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <img src="icons/gmail.png" alt="Email Icon" class="icon">
+                <div class="text">
+                    <p>Email</p>
+                    <a href="mailto:your-email@gmail.com">yashraj7801@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <img src="icons/linkedin.png" alt="LinkedIn Icon" class="icon">
+                <div class="text">
+                    <p>LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/yashraj-parmar-3074b5252/" target="_blank">@Yashraj Parmar</a>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>

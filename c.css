@@ -1,0 +1,620 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #0a0a0a;
+    padding: 1rem 2rem;
+    display: flex; /* Flexbox container */
+    justify-content: space-between; /* Separate logo and nav-links */
+    align-items: center; /* Align vertically */
+    position: sticky;
+    top: 0;
+    width: 100%; /* Ensure full width */
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.logo span {
+    color: #00ff88;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex; /* Makes the child elements align in a row */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Adds space between items if needed */
+    gap: 1rem; /* Adds space between the <ul> and the <button> */
+}
+
+.nav-links {
+    display: flex; /* Ensures the list items are in a row */
+    gap: 1rem; /* Adds spacing between list items */
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+ 
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #83ec8d;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #236724;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #256723;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: #83ec8d;;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+  
+   
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    gap: 2rem; /* Add spacing between flex items */
+    padding: 3rem 2rem;
+}
+
+.intro {
+    max-width: 50%;
+    order: 1;
+}
+
+.intro .role {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.intro .greeting {
+    font-size: 50px;
+}
+
+.intro .greeting span {
+    color: #00ff88;
+}
+
+.intro .description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.anchor {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid #04fc5f;
+    padding: 14px 40px 13px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .anchor:hover {
+    color: #968a8e;
+  }
+  
+  .button a::before {
+    position: absolute;
+    content: "";
+    z-index: 0;
+    background-color: #04fc5f;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    height: 111%;
+    transition: all .3s ease;
+  }
+  
+  .button a:hover::before {
+    height: 11%;
+  }
+  
+  .button span {
+    position: relative;
+    z-index: 2;
+    transition: all .3s ease;
+  }
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons .icon {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #00ff88;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-icons .icon:hover {
+    color: #00cc6e;
+}
+
+/* Profile Picture */
+.profile-pic {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    order: 2; /* Place profile-pic on the right */
+    margin-left: auto; /* Push profile-pic to the right */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.circle-border {
+    position: absolute;
+    top: -6px; /* Slightly outside the image */
+    left: -6px; /* Slightly outside the image */
+    width: 370px; /* Adjusted size for the border */
+    height: 370px;
+    border-radius: 50%; /* Ensure it's a perfect circle */
+    border: 6px solid #00ff88; /* Thick green border */
+    background: transparent; /* Transparent inside */
+    z-index: 0; /* Ensure it stays below the image */
+    pointer-events: none; /* Prevent interaction */
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures proper fit */
+    position: relative;
+    z-index: 1; /* Ensure image is above the border */
+}
+
+    
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #111;
+}
+
+.stats .stat {
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 1.5rem;
+    color: #00ff88;
+}
+
+.stats p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/*resume*/
+/* Overall container for the columns */
+.main-container {
+    padding-top: 10%;
+    display: flex;
+    justify-content: center; /* Centers the columns horizontally */
+    align-items: center; /* Centers the columns vertically */
+    height: 100%; /* Takes up the full height of the page */
+    overflow: auto;
+}
+
+.main-container, .columns-container, .right-column {
+    position: relative;
+}
+
+.columns-container {
+    display: flex;
+    gap: 250px; /* Space between the columns */
+    align-items: flex-start;
+}
+
+/* Left column - for buttons */
+.left-column {
+    width: 25%; /* This takes 25% of the container width */
+}
+
+
+/* Right column - for content */
+.right-column {
+    width: 70%; /* This takes 70% of the container width */
+    min-height: 100%; /* Set a consistent minimum height */
+    position: relative;
+}
+
+
+/* Make sure the buttons and content are aligned properly */
+.buttons {
+    margin: 10px;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    font-family: "Arial", sans-serif;
+    font-size: 2em;
+    color: transparent;
+    letter-spacing: 3px;
+    text-decoration: none;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6); /* Stroke for the normal text */
+    overflow: hidden;
+}
+
+.buttons .hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%; /* Ensure it covers the button fully */
+    color: #37FF8B;
+    box-sizing: border-box;
+    border-right: 6px solid #37FF8B;
+    overflow: hidden;
+    -webkit-text-stroke: 1px #37FF8B;
+    transition: width 0.5s ease;
+    text-align: center; /* Ensure text stays aligned */
+    line-height: 1.2em; /* Match button height for alignment */
+}
+
+.buttons.active .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px #37FF8B);
+}
+
+/* Styling for the content sections */
+.content {
+    display: none; /* All sections are hidden by default */
+    position: relative;
+}
+
+.content .h3{
+    font-size: 25px;
+    font-weight: bold;
+    color: #868686;
+}
+
+.content .highlight{
+    color: #757575;
+}
+.content.active {
+    display: block; /* Active section will be shown */
+}
+
+/* Container for icons in grid format */
+.social-icon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
+    gap: 20px; /* Space between the icons */
+    justify-items: center;
+    margin-top: 80px;
+}
+
+/* Styling for individual icon containers */
+.social-icon .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Width of the tile */
+    height: 80px; /* Height of the tile */
+    background-color: white; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Image inside the icon tile */
+.social-icon .icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* Hover effect for icons */
+.social-icon .icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the tile on hover */
+}
+
+/* Tooltip for icon names near the cursor */
+.social-icon .icon:hover::after {
+    content: attr(title); /* Use the title attribute as the icon's name */
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position to the right of the icon */
+    margin-left: 10px; /* Space between icon and name */
+    padding: 5px;
+    background-color: #37FF8B; /* Green background for name */
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    opacity: 1;
+    pointer-events: none; /* Ensure the tooltip doesn't interfere with mouse events */
+}
+
+/* Ensure the name appears near the mouse */
+.social-icon .icon:hover::after {
+    transition: opacity 0.3s ease;
+}
+
+/*Card for education*/
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+  }
+  
+  .card {
+    background-color: #1e1e1e; /* Dark background for the cards */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card h3 {
+    color: #00ffa3; /* Accent color for year */
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+  }
+  
+  .card p {
+    color: #ffffff; /* White text for content */
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  
+  .card span {
+    color: #999999; /* Subtle color for the platform name */
+    font-size: 0.9em;
+  }
+
+
+ /* Work Section */
+ .work-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project .details {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.project .details h2 {
+    font-size: 36px;
+}
+
+.project .details p {
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.project .details span {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.project .screenshot {
+    flex: 1;
+    position: relative;
+}
+
+.project .screenshot img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    position: absolute;
+    bottom: -80px; /* Positioned just below the image */
+    right: 3px;
+    display: flex;
+    gap: 10px;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #242121;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #000000;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #000000;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }  
+  .wrapper svg {
+    fill: green;
+  }
+
+  .details h1.project-number {
+    font-size: 3rem;  /* Adjust size as needed */
+    font-weight: bold;
+    color: #ffffff;  /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.details h2 {
+    font-size: 2.5rem;
+    color: #fffefe;
+    margin-top: 10px;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.details p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 5px;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.details span {
+    font-size: 1rem;
+    color: #fffafa;
+}
+
+.actions a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #007bff;  /* Change to your desired link color */
+    transition: color 0.3s ease;
+}
+
+.actions a:hover {
+    color: #0056b3;  /* Darker blue on hover */
+}

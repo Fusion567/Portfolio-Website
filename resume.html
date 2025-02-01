@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="c.css">
+    <script defer src="resume.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">Yashraj <span>.</span></h1>
+        </nav>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="work.html">Work</a></li>
+            <a href="hire.html">
+                <button class="cta">
+                    <span>Hire Me</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </a>
+        </ul>
+    </header>
+
+    <main> 
+        <section class="resume">
+            <div class="main-container">
+                <div class="columns-container">
+                    <!-- Left Column: Buttons -->
+                    <div class="left-column">
+                        <h2>Why hire me?</h2>
+                        <br> <br>
+                        <button class="buttons" data-text="Experience">
+                            <span class="actual-text">Experience</span>
+                            <span aria-hidden="true" class="hover-text">Experience</span>
+                        </button>
+                        <br>
+                        <button class="buttons" data-text="Education">
+                            <span class="actual-text">Education</span>
+                            <span aria-hidden="true" class="hover-text">Education</span>
+                        </button>
+                        <br>
+                        <button class="buttons skills-btn" data-text="Skills">
+                            <span class="actual-text">Skills</span>
+                            <span aria-hidden="true" class="hover-text">Skills</span>
+                        </button>
+                        <br>
+                        <button class="buttons" data-text="aboutme">
+                            <span class="actual-text">About Me</span>
+                            <span aria-hidden="true" class="hover-text">About Me</span>
+                        </button>                        
+                    </div>
+
+                    <!-- Right Column: Content -->
+                    <div class="right-column">
+                        <div class="content" id="experience">
+                            <h2>Experience</h2>
+                            <div class="card-container">
+                                <div class="card">
+                                  <h3>2023-2024</h3>
+                                  <p>AI-ML Co-Lead</p>
+                                  <span>Google Developer Student Club</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" id="education" style="display: none;">
+                            <div class="card-container">
+                                <div class="card">
+                                  <h3>2024</h3>
+                                  <p>IBM Data Science</p>
+                                  <span>Coursera</span>
+                                </div>
+                                <div class="card">
+                                  <h3>2023</h3>
+                                  <p>The Fundamentals of Digital Marketing</p>
+                                  <span>Google Digital Garage</span>
+                                </div>
+                                <div class="card">
+                                  <h3>2023</h3>
+                                  <p>Elements of AI</p>
+                                  <span>University of Helsinki</span>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="content" id="skills" style="display: none;">
+                            <div class="social-icon">
+                                <a href="icons/python.png" class="icon" title="Python">
+                                    <img src="icons/python.png" alt="Python">
+                                </a>
+                                <a href="icons/java-logo.png" class="icon" title="Java">
+                                    <img src="icons/java-logo.png" alt="Java">
+                                </a>
+                                <a href="icons/sql-server.png" class="icon" title="SQL Server">
+                                    <img src="icons/sql-server.png" alt="SQL Server">
+                                </a>
+                                <a href="icons/social.png" class="icon" title="Git">
+                                    <img src="icons/social.png" alt="Git">
+                                </a>
+                                <a href="icons/html.png" class="icon" title="HTML">
+                                    <img src="icons/html.png" alt="HTML">
+                                </a>
+                                <a href="icons/css-3.png" class="icon" title="CSS3">
+                                    <img src="icons/css-3.png" alt="CSS3">
+                                </a>
+                                <a href="icons/js.png" class="icon" title="JavaScript">
+                                    <img src="icons/js.png" alt="JavaScript">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content" id="aboutme" style="display: none;"> 
+                            <h2>About Me</h2>
+                            <h3 class="align-left"><span class="highlight">Name : </span>Yashrajsinh Parmar</h3>
+                            <h3 class="align-left"><span class="highlight">Phone : </span>9104797518</h3> 
+                            <h3 class="align-left"><span class="highlight">Email : </span>yashraj7801@gmail.com</h3> 
+                            <h3 class="align-left"><span class="highlight">Nationality : </span>Indian</h3> 
+                            <h3 class="align-left"><span class="highlight">Freelance : </span>Available</h3> 
+                            <h3 class="align-left"><span class="highlight">Languages : </span>English, Hindi, Gujrati</h3> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
