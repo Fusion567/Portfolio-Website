@@ -4,7 +4,7 @@ const projects = [
         title: "Automobile Sales Dashboard",
         description: "Data Visualization Project",
         technologies: "Python, pandas, dash, plotly",
-        image: "DataV.png",
+        image: "icons/DataV.png",
         liveDemo: "#",
         sourceCode: "https://github.com/Fusion567/Automobile-Sales-Dashboard"
     },
@@ -12,7 +12,7 @@ const projects = [
         title: "Webscraping Project",
         description: "Extracting and Visualizing Stock Data",
         technologies: "yfinance library, data extraction and visualization",
-        image: "stock.jpg",
+        image: "icons/stock.jpg",
         liveDemo: "#",
         sourceCode: "https://github.com/Fusion567/Extracting-and-visualizing-stock-data"
     },
@@ -20,7 +20,7 @@ const projects = [
         title: "Credit-Card-Fraud-Detection",
         description: "Project to detect credit card fraud using machine learning",
         technologies: "Scikit-Learn, IBM’s Snap ML, AUC-ROC",
-        image: "credit.jpg",
+        image: "icons/credit.jpg",
         liveDemo: "#",
         sourceCode: "https://github.com/Fusion567/Credit-Card-Fraud-Detection-using-Scikit-Learn-and-Snap-ML"
     },
@@ -28,7 +28,7 @@ const projects = [
         title: "Chatbot",
         description: "A chatbot for Financial Queries",
         technologies: "NLTK, Flask, HTML 5, CSS 3, JavaScript",
-        image: "Chatbot_1.png",
+        image: "icons/Chatbot_1.png",
         liveDemo: "#",
         sourceCode: "https://github.com/Fusion567/Chatbot-Financial-Queries"
     }
